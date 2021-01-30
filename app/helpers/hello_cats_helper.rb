@@ -1,0 +1,2 @@
+module HelloCatsHelper
+end
