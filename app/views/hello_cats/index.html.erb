@@ -1,3 +1,17 @@
 <h1>HelloCats!!</h1>
 <p>ネコのブログ</p>
 <img src="/assets/Shima.png">
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Age</th>
+    <th>Color</th>
+  </tr>
+  <% @catsinfo.each do |info| %>
+  <tr>
+    <td><%= info.name %></td>
+    <td><%= info.age %></td>
+    <td><%= info.color %></td>
+  </tr>
+  <% end %>
+</table>

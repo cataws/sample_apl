@@ -1,0 +1,2 @@
+class CatsInfo < ApplicationRecord
+end
