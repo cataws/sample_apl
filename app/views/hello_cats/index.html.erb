@@ -5,12 +5,14 @@
   <tr>
     <th>Name</th>
     <th>Age</th>
+    <th>Birthday</th>
     <th>Color</th>
   </tr>
   <% @catsinfo.each do |info| %>
   <tr>
     <td><%= info.name %></td>
     <td><%= info.age %></td>
+    <td><%= info.year %>年<%= info.month %>月<%= info.date %>日</td>
     <td><%= info.color %></td>
   </tr>
   <% end %>
