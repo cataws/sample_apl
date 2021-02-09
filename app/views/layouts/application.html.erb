@@ -14,7 +14,6 @@
     <header>
       <nav>
         <% if user_signed_in? %>
-          <%= link_to '新規投稿', new_tweet_path %>
           <%= link_to 'マイページ', user_path(current_user.id) %>
           <%= link_to '登録内容変更', edit_user_registration_path %>
           <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %>
@@ -22,12 +21,18 @@
           <%= link_to '新規登録', new_user_registration_path %>
           <%= link_to 'ログイン', new_user_session_path %>
         <% end %>
-          <%= link_to 'ツイート一覧', tweets_path %>
-          <%= link_to 'ユーザー一覧', users_path %>
+        <hr size="5">
       </nav>
     </header>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
+    <div>
+      <%= link_to '■ ネコの素晴らしさに共感する', tweets_path %><br />
+      <%= link_to '■ ネコに人生を捧げたニンゲン一覧', users_path %><br />
+      <% if user_signed_in? %>
+        <%= link_to '■ ネコの素晴らしさを主張する', new_tweet_path %>
+      <% end %>
+    </div>
     <%= yield %>
   </body>
 </html>

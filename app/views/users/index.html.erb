@@ -1,9 +1,9 @@
-<h1>Users#index</h1>
-<p>Find me in app/views/users/index.html.erb</p>
+<h1>ネコに人生を捧げたニンゲンたち</h1>
+<p>ここのニンゲンたちは、自分のことをネコのシモベだと思っているのだ。<br />全員、今朝もネコ吸いをしたはずだ。</p>
 
 <% @users.each do |user| %>
   <hr size="5">
-  <p><span>email: </span><%= link_to user.email, user_path(user.id) %></p>
+  <p><span>シモベ No.<%= user.id %>: </span><%= link_to user.email, user_path(user.id) %></p>
 <% end %>
 
 
