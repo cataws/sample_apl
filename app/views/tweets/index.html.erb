@@ -1,0 +1,8 @@
+<h1>ネコの素晴らしさに共感しよう！</h1>
+<p>うちのコだろうが、よそのコだろうが、ネコ好きは全世界共通！<br />「わかる～！！！」がきっとある。</p>
+
+<% @tweets.each do |tweet| %>
+  <hr size="5">
+  <p><span><%= tweet.id %>：</span><%= link_to tweet.body, tweet_path(tweet.id) %></p>
+<% end %>
+
