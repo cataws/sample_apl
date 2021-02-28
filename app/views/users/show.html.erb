@@ -3,3 +3,8 @@
 
 <hr size="5">
 <p><span>email: </span><%= @users.email %></p>
+
+<% @tweets.each do |tweet| %>
+    <hr size="2">
+    <p><span></span><%=link_to tweet.body, tweet_path(tweet.id) %></p>
+<% end %>

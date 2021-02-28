@@ -10,6 +10,8 @@ class TweetsController < ApplicationController
 
   def show
     @tweets = Tweet.find(params[:id])
+    @users = @tweets.user
+    @tweets.user_id = current_user.id
   end
 
   def create
